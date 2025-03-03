@@ -1,6 +1,6 @@
 ---
 
-### *Task Management System**
+### *Task Management System*
 
 ---
 
@@ -28,5 +28,18 @@
 - **Tasks:**
   - Created a repository interface by extending `JpaRepository<Task, Long>` to automatically generate CRUD operations for the `Task` entity.
   - This interface handles database operations like saving, updating, finding, and deleting tasks without requiring manual SQL queries.
+
+---
+
+#### **Ticket 4: Create the `TaskService` Class**
+
+- **Tasks:**
+  - Created a service class (`TaskService`) to implement the business logic for managing tasks.
+  - Implemented the following methods:
+    - `getAllTasks()` to fetch all tasks from the repository.
+    - `getTaskById(Long id)` to retrieve a task by its ID.
+    - `createTask(Task task)` to create and save a new task.
+    - `updateTask(Long id, Task updatedTask)` to update an existing task.    
+    - `deleteTask(Long id)` to delete a task.
 
 ---
