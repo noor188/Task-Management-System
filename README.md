@@ -57,3 +57,14 @@
   - Used `@GetMapping`, `@PostMapping`, `@PutMapping`, and `@DeleteMapping` for handling HTTP requests.
 
 ---
+
+#### **Ticket 6: Test the API Endpoints**
+
+- **Tasks:**
+  - Used **Postman** tool to fully test the endpoints I created. Performed the following operations in sequence:
+
+1. **Created a new task** using the `POST /api/tasks` endpoint
+2. **Retrieved all tasks** using the `GET /api/tasks` endpoint   
+3. **Retrieved a specific task by ID** using the `GET /api/tasks/{id}` endpoint
+4. **Updated an existing task** using the `PUT /api/tasks/{id}` endpoint
+5. **Deleted a task** using the `DELETE /api/tasks/{id}` endpoint
