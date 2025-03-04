@@ -75,13 +75,11 @@
 
 I implemented the core of the Task Management application, focusing on how the controller interacts with Thymeleaf for rendering dynamic pages.
 
----
-
-**Step 1: Implemented the Task List Page (GET /tasks)**
-**Step 2: Implemented the Task Creation Form (GET /tasks/new)**
-**Step 3: Implemented the Task Edit Form (GET /tasks/edit/{id})**
-**Step 4: Implemented Task Creation and Update (POST /tasks/save)**
-**Step 5: Implemented Task Deletion (GET /tasks/delete/{id})**
+1. **Step 1**: Implemented the Task List Page (GET /tasks)
+2. **Step 2**: Implemented the Task Creation Form (GET /tasks/new)
+3. **Step 3**: Implemented the Task Edit Form (GET /tasks/edit/{id})
+4. **Step 4**: Implemented Task Creation and Update (POST /tasks/save)
+5. **Step 5**: Implemented Task Deletion (GET /tasks/delete/{id})
 ---
 
 #### **Ticket 8: Test the Thymeleaf Frontend**
