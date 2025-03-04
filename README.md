@@ -43,3 +43,17 @@
     - `deleteTask(Long id)` to delete a task.
 
 ---
+
+#### **Ticket 5: Create the `TaskController` Class**
+
+- **Tasks:**
+  - Created a REST controller (`TaskController`) to expose task management functionality through HTTP endpoints.
+  - Implemented the following endpoints:
+    - **GET** `/api/tasks` to retrieve all tasks.
+    - **GET** `/api/tasks/{id}` to retrieve a specific task by its ID.
+    - **POST** `/api/tasks` to create a new task.
+    - **PUT** `/api/tasks/{id}` to update an existing task by ID.     
+    - **DELETE** `/api/tasks/{id}` to delete a task by ID.
+  - Used `@GetMapping`, `@PostMapping`, `@PutMapping`, and `@DeleteMapping` for handling HTTP requests.
+
+---
