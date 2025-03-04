@@ -12,7 +12,7 @@
 <div class="container">
     <h1 th:if="${task.id == null}">Create Task</h1>
     <h1 th:if="${task.id != null}">Edit Task</h1>
-   <form action="#" th:object="${task}" method="post" class="project-form">
+   <form th:action="@{/tasks/save}" th:object="${task}" method="post" class="project-form">
         <input type="hidden" th:field="*{id}" />
         <div class="form-group">
             <label>Title
@@ -30,7 +30,7 @@
                 <input type="text" th:field="*{status}" placeholder="Enter status ...">
             </label>
         </div>
-        <button type="submit" class="submit-button">Create task</button>
+        <button type="submit" class="submit-button">Save</button>
     </form>
     <a href="/tasks" class="back-button">Back to Task List</a>
 </div>
