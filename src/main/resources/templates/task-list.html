@@ -1,0 +1,30 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" th:href="@{/css/task-list.css}" />
+    <title>Task managment system</title>
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <h1>Task List</h1>
+        <div class="product-grid">
+            <div th:each="task : ${tasks}" class="product-card" >
+                <div class="product-details">
+                    <h2 th:text="${task.title}">title</h2>
+                    <p><strong>Description:</strong><span th:text="${task.description}">description</span></p>
+                    <p><strong>Status:</strong><span th:text="${task.status}">status</span></p>
+                </div>
+
+                <div class="product-actions">
+                    <a th:href="@{/tasks/edit/{id}(id=${task.id})}" class="edit-button">Edit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="/tasks/new" class="add-button">Add New Task</a>
+</body>
+</html>
