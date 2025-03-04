@@ -26,18 +26,25 @@ public class TaskService {
         taskRepository.save(task);
     }
 
-    public void updateTask(Long id, Task updateTask){
-        Optional<Task> task = taskRepository.findById(id);
-        if (task.isPresent()){
-            Task oldTask = task.get();
-            oldTask.setTitle(updateTask.getTitle());
-            oldTask.setDescription(updateTask.getDescription());
-            oldTask.setTitle(updateTask.getTitle());
-            taskRepository.save(oldTask);
-        }else {
-            System.out.println("Task not found!!!");
-        }
-
+    public Task updateTask(Long id, Task updateTask){
+//        Optional<Task> task = taskRepository.findById(id);
+//        if (task.isPresent()){
+//            Task oldTask = task.get();
+//            oldTask.setTitle(updateTask.getTitle());
+//            oldTask.setDescription(updateTask.getDescription());
+//            oldTask.setTitle(updateTask.getTitle());
+//            return taskRepository.save(oldTask);
+//        }else {
+//            throw new RuntimeException("Task not found!!!")
+//        }
+        return taskRepository.findById(id)
+                .map(task -> {
+                    task.setTitle(updateTask.getTitle());
+                    task.setDescription(updateTask.getDescription());
+                    task.setStatus(updateTask.getStatus());
+                    return taskRepository.save(task);
+                })
+                .orElseThrow(() -> new RuntimeException("Task not found"));
     }
 
     public void deleteTask(Long id){
