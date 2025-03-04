@@ -68,3 +68,29 @@
 3. **Retrieved a specific task by ID** using the `GET /api/tasks/{id}` endpoint
 4. **Updated an existing task** using the `PUT /api/tasks/{id}` endpoint
 5. **Deleted a task** using the `DELETE /api/tasks/{id}` endpoint
+
+---
+
+#### **Ticket 7: Create the TaskController Class with Thymeleaf**
+
+I implemented the core of the Task Management application, focusing on how the controller interacts with Thymeleaf for rendering dynamic pages.
+
+---
+
+**Step 1: Implemented the Task List Page (GET /tasks)**
+**Step 2: Implemented the Task Creation Form (GET /tasks/new)**
+**Step 3: Implemented the Task Edit Form (GET /tasks/edit/{id})**
+**Step 4: Implemented Task Creation and Update (POST /tasks/save)**
+**Step 5: Implemented Task Deletion (GET /tasks/delete/{id})**
+---
+
+#### **Ticket 8: Test the Thymeleaf Frontend**
+
+**Tasks:**
+1. Tested the Thymeleaf frontend by running the Spring Boot application and accessing the following pages:
+   - `/tasks` to view the list of tasks.
+   - `/tasks/new` to create a new task.
+   - `/tasks/edit/{id}` to edit an existing task.
+   - Test the delete functionality by deleting a task from the list view.
+
+---
