@@ -57,6 +57,12 @@ public class TaskControllerWThymeleaf {
         return "redirect:/tasks";
     }
 
+    @DeleteMapping("/delete/{id}")
+    public String deleteTask(@PathVariable Long id){
+        taskService.deleteTask(id);
+        return "redirect:/tasks";
+    }
+
 
 
 
